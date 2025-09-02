@@ -1,0 +1,32 @@
+@use '../utilities/variables' as v;
+
+#donde-estamos {
+    background-color: v.$blanco;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    scroll-margin-top: 180px;
+
+    .texto {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+        color: v.$color-principal;
+        width: 600px;
+
+        h3 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            width: 100%;
+            line-height: 30px;
+        }
+    }
+}
+

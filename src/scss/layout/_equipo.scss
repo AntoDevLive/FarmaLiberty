@@ -1,0 +1,60 @@
+@use '../utilities/variables' as v;
+
+#equipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 160px;
+}
+
+.equipo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    .img-container {
+        height: 400px;
+    }
+
+
+    .texto-equipo {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 30px;
+        width: 600px;
+
+
+        h3 {
+            color: v.$color-principal;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            color: v.$color-principal;
+            line-height: 30px;
+        }
+
+        a {
+            font-size: 20px;
+            padding: 10px;
+            border: 2px solid v.$color-principal;
+            color: v.$color-principal;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: transparent;
+            transition: .4s;
+
+            &:hover {
+                background-color: v.$color-principal;
+                color: #fff;
+            }
+        }
+    }
+}

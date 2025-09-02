@@ -1,0 +1,63 @@
+@use '../utilities/variables' as v;
+
+#testimoniales {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+        color: v.$color-principal;
+        font-size: 60px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        color: v.$color-principal;
+    }
+}
+
+.testimoniales-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 30px;
+}
+
+.testimonial {
+    background-color: v.$blanco;
+    width: 600px;
+    padding: 50px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    transition: .4s;
+
+    &:hover {
+        box-shadow: 0px 5px 8px 6px rgba(17, 40, 63, 0.75);
+        transform: scale(1.02);
+    }
+
+    p:nth-child(1) {
+        color: v.$color-principal;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    p:nth-child(2) {
+        color: v.$color-secundario;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    p:nth-child(3) {
+        color: #7190ad;
+    }
+}
+
+

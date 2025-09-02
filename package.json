@@ -1,0 +1,14 @@
+{
+  "name": "farmaliberty",
+  "version": "1.0.0",
+  "description": "proyecto en directo de SPA farmacéutica",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "author": "Antonio Castizo",
+  "license": "ISC",
+  "devDependencies": {
+    "scss": "^0.2.4"
+  }
+}

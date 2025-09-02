@@ -1,0 +1,27 @@
+@use '../utilities/variables' as v;
+
+#contacto {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    scroll-margin-top: -15px;
+
+    h2 {
+        font-size: 60px;
+        color: v.$color-principal;
+    }
+
+    p {
+        font-size: 20px;
+        width: 1100px;
+        text-align: center;
+    }
+}
+
+#form-contacto {
+    margin-top: 30px;
+    padding: 20px 50px;
+}

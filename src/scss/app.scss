@@ -1,0 +1,18 @@
+/* Layout */
+@import 'layout/header';
+@import 'layout/conocenos';
+@import 'layout/equipo';
+@import 'layout/mapa';
+@import 'layout/testimoniales';
+@import 'layout/eventos';
+@import 'layout/contacto';
+@import 'layout/footer';
+
+
+/* Admin */
+@import 'admin/panel';
+@import 'admin/testimoniales';
+
+/* Utilities */
+@import 'utilities/generales';
+@import 'utilities/variables';

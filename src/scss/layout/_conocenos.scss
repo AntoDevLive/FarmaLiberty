@@ -1,0 +1,78 @@
+@use '../utilities/variables' as v;
+
+#conocenos {
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: v.$blanco;
+    scroll-margin-top: 50px;
+
+    h2 {
+        font-size: 60px;
+        color: v.$color-principal;
+    }
+
+    .texto-conocenos {
+        font-size: 18px;
+        color: v.$color-principal;
+        width: 1400px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    a {
+        margin-top: 50px;
+    }
+}
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+    margin-top: 50px;
+
+    .valor-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 50px 20px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 5px 21px 1px rgba(17,40,63,0.75);
+        transition: .4s;
+
+        &:hover {
+            box-shadow: 0px 5px 8px 6px rgba(17,40,63,0.75);
+            transform: scale(1.05);
+        }
+    }
+}
+
+.valor {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        color: v.$color-principal;
+        gap: 10px;
+
+    svg {
+        width: 35px;
+        height: 35px;
+        color: v.$color-principal;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: start;
+        width: 300px;
+        line-height: 25px;
+    }
+}

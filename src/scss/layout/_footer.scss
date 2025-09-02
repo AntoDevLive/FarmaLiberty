@@ -1,0 +1,77 @@
+@use '../utilities/variables' as v;
+
+footer {
+    background-color: v.$color-principal;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.copy-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.nav-footer {
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-size: 18px;
+    }
+
+    .iconos-redes {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 20px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.linkedin {
+    color: #75b5ff;
+}
+
+.facebook {
+    color: #75b5ff;
+}
+
+.instagram {
+    color: #E1306C;
+}
+
+.threads {
+    color: #fff;
+}
+
+.youtube {
+    color: #FF0000;
+}

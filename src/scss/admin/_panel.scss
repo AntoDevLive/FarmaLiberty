@@ -1,0 +1,65 @@
+@use '../utilities/variables' as v;
+
+.panel-admin {
+    padding: 100px 0;
+    width: 100%;
+    height: auto;
+    background-image: url(../../src/img/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+        font-size: 50px;
+        color: v.$color-secundario;
+    }
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #09141f;
+    position: relative;
+    width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    nav {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #09141f;
+        padding: 10px 20px;
+        border-bottom: 2px solid v.$color-secundario;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    .panel-body {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+
+        h2 {
+            font-size: 40px;
+            color: v.$color-principal;
+        }
+    }
+}

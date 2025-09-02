@@ -1,0 +1,83 @@
+@use '../utilities/variables' as v;
+
+#eventos {
+    padding: 100px 0;
+    background-color: v.$color-principal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    scroll-margin-top: 20px;
+
+    h2 {
+    font-size: 60px;
+    color: #fff;
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    img {
+        width: 900px;
+        border-radius: 8px;
+    }
+}
+
+.play-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+        background-color: v.$color-secundario;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 8px;
+        cursor: pointer;
+        color: #fff;
+
+        &:hover {
+            background-color: #ffa09d;
+        }
+    }
+
+    p {
+        font-size: 30px !important;
+        cursor: pointer;
+
+        &:hover {
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.btn-video {
+    transition: .4s;
+}
+
+.video-container {
+    position: relative;
+
+    #btn-cerrar {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        top: -10px;
+        right: -20px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+        transition: .4s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: rgb(255, 107, 107);
+        }
+    }
+}

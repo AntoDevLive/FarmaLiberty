@@ -1,0 +1,153 @@
+@use '../utilities/variables' as v;
+
+
+.testimonial-panel-container {
+    background-color: v.$blanco;
+    width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    transition: .4s;
+    position: relative;
+    gap: 20px;
+
+
+    button {
+        font-size: 20px;
+        padding: 5px 20px;
+        background-color: v.$color-secundario;
+        color: #fff;
+        border: none;
+        transition: .4s;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #ffa29f;
+        }
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+.testimonial-panel {
+    background-color: v.$blanco;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    transition: .4s;
+
+    p:nth-child(1) {
+        color: v.$color-principal;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    p:nth-child(2) {
+        color: v.$color-secundario;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    p:nth-child(3) {
+        color: #7190ad;
+    }
+}
+
+
+.active {
+    background-color: #ffa29f !important;
+    cursor: default;
+
+    &:hover {
+        transform: scale(1) !important;
+    }
+}
+
+
+.disabled {
+    background-color: #bdbdbd !important;
+    cursor: not-allowed;
+
+    &:hover {
+        transform: scale(1) !important;
+        background-color: #bdbdbd;
+    }
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        font-size: 20px;
+        padding: 10px;
+        background-color: v.$color-secundario;
+        color: #fff;
+        border-radius: 4px;
+        transition: .4s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: #ffa29f;
+        }
+    }
+}
+
+.mensaje-testimonial {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+}
+
+#form-filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    select,
+    input {
+        font-size: 20px;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    select {
+        background-color: v.$blanco;
+        border: 2px solid #d4eaff;
+        outline: none;
+
+        &:focus {
+            border: 2px solid #8ac6ff;
+        }
+    }
+
+    input {
+        background-color: #ff6964;
+        color: #fff;
+        cursor: pointer;
+        border: 2px solid #ffa29f;
+        transition: .3s;
+        padding: 4px 10px;
+
+        &:hover {
+            background-color: #ffa29f;
+        }
+    }
+}
