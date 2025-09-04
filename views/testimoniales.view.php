@@ -36,11 +36,11 @@
 
                         <div class="botones">
                             <?php if($filtro == 'aprobado'): ?>                                
-                                <button class="btn-ocultar" data-id="<?php echo $testimonial['id'] ?>">Ocultar</button>
+                                <button data-action="ocultar" class="btn-ocultar" data-id="<?php echo $testimonial['id'] ?>">Ocultar</button>
                             <?php else: ?>
-                                <button class="btn-aprobar" data-id="<?php echo $testimonial['id'] ?>">Publicar</button>  
+                                <button data-action="publicar" class="btn-aprobar" data-id="<?php echo $testimonial['id'] ?>">Publicar</button>  
                             <?php endif; ?>                              
-                            <button class="btn-descartar" data-id="<?php echo $testimonial['id'] ?>">Descartar</button>
+                            <button data-action="descartar" class="btn-descartar" data-id="<?php echo $testimonial['id'] ?>">Descartar</button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<script src="../js/panel.js"></script>
+<script type="module" src="../js/panel.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ':id' => $id
         ]);
 
-        echo 'Testimonial aprobado';
+        echo 'Testimonial publicado';
     } catch (PDOException $e) {
         echo $e->getMessage();
         exit;

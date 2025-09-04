@@ -235,7 +235,7 @@
 
 <?php include 'templates/footer.php' ?>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
