@@ -362,7 +362,7 @@ header {
 .entradas {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 200px 0;
+  padding-block: 200px 0;
   column-gap: 200px;
   row-gap: 100px;
   width: fit-content;
@@ -617,6 +617,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 100px 0;
 }
 .paginacion a {
   font-size: 20px;
