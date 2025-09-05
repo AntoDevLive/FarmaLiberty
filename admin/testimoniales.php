@@ -1,10 +1,6 @@
-<?php
+<?php require '../funciones.php';
 
-try {
-    $conexion = new PDO('mysql:hostname=localhost;dbname=farmaliberty', 'root', '');
-} catch (PDOException $e) {
-    $e -> getMessage();
-}
+$conexion = conexionDB('localhost', 'root', '');
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,10 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'pendiente';
 
-
 $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-
-
 
 $postPorPagina = 4;
 

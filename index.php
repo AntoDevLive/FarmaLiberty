@@ -2,7 +2,7 @@
 
 include 'funciones.php';
 
-$conexion = conexionDB('localhost', 'farmaliberty', 'root', '');
+$conexion = conexionDB('localhost', 'root', '');
 
 $statement = $conexion->prepare("SELECT * FROM testimoniales WHERE estado = 'aprobado'");
 $statement->execute();

@@ -359,6 +359,60 @@ header {
   padding: 20px 50px;
 }
 
+.entradas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 200px 0;
+  column-gap: 200px;
+  row-gap: 100px;
+  width: fit-content;
+  margin: auto;
+}
+
+.entrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  background-color: #ebf2f9;
+  padding: 20px 0;
+  border-radius: 8px;
+}
+.entrada .entrada-img {
+  width: 80%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.entrada .entrada-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.entrada .entrada-img img:hover {
+  transform: scale(1.1);
+}
+.entrada h2 {
+  font-size: 30px;
+}
+.entrada p {
+  width: 80%;
+  text-wrap: pretty;
+  font-size: 20px;
+  line-height: 30px;
+}
+.entrada a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ff5e58;
+}
+.entrada a:hover {
+  text-decoration: underline;
+}
+
 footer {
   background-color: #11283f;
   padding: 50px 0;

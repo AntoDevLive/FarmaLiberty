@@ -64,5 +64,5 @@
             </div>
         </div>
 
-        <script type="module" src="js/main.js"></script>
+        <script type="module"  <?php if($inicio) echo "src='js/main.js'" ?>></script>
     </footer>

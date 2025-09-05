@@ -9,7 +9,7 @@ document.addEventListener('scroll', () => {
     } else {
         barra.classList.remove('header-fijo');
     }
-})
+});
 
 // Sección Eventos (vídeo)
 reproducirVideo();
