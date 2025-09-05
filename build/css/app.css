@@ -1,10 +1,13 @@
 /* Layout */
 header {
+  position: relative;
+}
+
+.header-inicio {
+  height: 100vh;
   background-image: url(../../src/img/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 919px;
-  position: relative;
 }
 
 .barra-bg {
@@ -428,7 +431,6 @@ footer {
 .panel-admin {
   padding: 100px 0;
   width: 100%;
-  height: auto;
   background-image: url(../../src/img/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;

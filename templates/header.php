@@ -29,9 +29,9 @@
         </div>
     </div>
 
-    <header id="inicio">
+    <header id="inicio" class="<?php if ($inicio) echo 'header-inicio'; ?>">
 
-        <div class="barra-bg">
+        <div class="barra-bg <?php if ($inicio == false) echo "header-fijo"; ?>">
 
             <div class="barra">
                 <div class="logo-container">
@@ -51,12 +51,14 @@
             </div>
         </div>
 
-        <div class="info-header">
-            <i>
-                <h1>Grupo Sell Out</h1>
-            </i>
-            <h2>Creado por y para las Farmacias</h2>
-            <p>Más de 50 farmacias mejoran la gestión y competitividad de su farmacia.</p>
-            <a class="boton-principal" href="#contacto">Únete a FarmaLiberty</a>
-        </div>
+        <?php if ($inicio): ?>
+            <div class="info-header">
+                <i>
+                    <h1>Grupo Sell Out</h1>
+                </i>
+                <h2>Creado por y para las Farmacias</h2>
+                <p>Más de 50 farmacias mejoran la gestión y competitividad de su farmacia.</p>
+                <a class="boton-principal" href="#contacto">Únete a FarmaLiberty</a>
+            </div>
+        <?php endif; ?>
     </header>

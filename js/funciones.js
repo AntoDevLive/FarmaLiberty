@@ -104,9 +104,8 @@ function crearAdvertencia(id, texto) {
     const btnConfirmar = document.createElement('button');
     const btnCancelar = document.createElement('button');
 
-    advertencia.classList.add('advertencia-testimonial')
-    botonesAdvertencia.classList.add('botones')
-    btnCerrar.classList.add('btn-cerrar')
+    advertencia.classList.add('advertencia-testimonial');
+    botonesAdvertencia.classList.add('botones');
 
     switch (texto) {
         case "publicar":
