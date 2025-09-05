@@ -35,7 +35,7 @@
 
             <div class="barra">
                 <div class="logo-container">
-                    <a href="/"><img src="src/img/logo.png" alt="Logo farma liberty"></a>
+                    <a href="http://localhost/FarmaLiberty/"><img src="src/img/logo.png" alt="Logo farma liberty"></a>
                 </div>
 
                 <nav>

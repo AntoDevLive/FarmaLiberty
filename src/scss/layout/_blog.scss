@@ -1,9 +1,59 @@
 @use '../utilities/variables' as v;
 
 .entradas {
+    padding-block: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+        font-size: 60px;
+        color: v.$color-secundario;
+    }
+}
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    input[type="text"] {
+        padding: 5px;
+        font-size: 20px;
+        width: 400px;
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+        border: 1px solid v.$color-principal;
+        outline: none;
+        border-right: none;
+
+        &:focus {
+            border: 2px solid #ff5e58;
+        }
+    }
+
+    button {
+        padding: 4px;
+        height: 100%;
+        cursor: pointer;
+        background-color: #ff5e58;
+        border: none;
+        padding: 8px;
+        border-radius: 0 4px 4px 0;
+
+        svg {
+            color: #fff;
+        }
+    }
+}
+
+.entradas-container {
+    padding-block: 100px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-block: 200px 0;
     column-gap: 200px;
     row-gap: 100px;
     width: fit-content;
