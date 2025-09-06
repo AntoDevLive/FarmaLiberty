@@ -26,10 +26,10 @@ include 'templates/header.php';  ?>
             echo '<div class="entrada">';
             echo '<h2>' . $entrada['titulo'] . '</h2>';
             echo '<div class="entrada-img">';
-            echo '<a href="#"><img src="' . $entrada['img'] . '"></a>';
+            echo '<a href="entrada.php?id=' . $entrada['id'] . '"><img src="' . $entrada['img'] . '"></a>';
             echo '</div>';
-            echo '<p>' . $entrada['contenido'] . '</p>';
-            echo '<a href="#">Leer más</a>';
+            echo '<p>' . $entrada['intro'] . '</p>';
+            echo '<a href="entrada.php?id=' . $entrada['id'] . '">Leer más</a>';
             echo '</div>';
         }
         ?>
@@ -62,4 +62,12 @@ include 'templates/header.php';  ?>
 
 
 <?php include 'templates/footer.php' ?>
+
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.ctrlKey && e.altKey && e.key === 'a') {
+            window.location.href = "/FarmaLiberty/admin/";
+        }
+    });
+</script>
 </body>

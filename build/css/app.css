@@ -458,6 +458,65 @@ header {
   text-decoration: underline;
 }
 
+.entrada-dinamica {
+  width: fit-content;
+  margin: auto;
+  padding-inline: 3rem;
+  padding-block: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.entrada-dinamica h1 {
+  font-size: 60px;
+  text-transform: capitalize;
+}
+.entrada-dinamica .enlace-entrada-vacia {
+  font-size: 30px;
+  background-color: #ff5e58;
+  border: 2px solid #ff8c88;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.entrada-dinamica .enlace-entrada-vacia svg {
+  transition: 0.3s;
+}
+.entrada-dinamica .enlace-entrada-vacia:hover {
+  filter: brightness(1.3);
+}
+.entrada-dinamica .enlace-entrada-vacia:hover svg {
+  transform: translate(-5px);
+}
+.entrada-dinamica img {
+  width: 900px;
+  border-radius: 8px;
+  box-shadow: -4px 4px 4px #a4d2ff, 4px 4px 4px #a4d2ff;
+}
+.entrada-dinamica strong {
+  max-width: 900px;
+  text-wrap: pretty;
+  font-size: 30px;
+}
+.entrada-dinamica p {
+  width: 80ch;
+  text-wrap: pretty;
+  font-size: 20px;
+  line-height: 30px;
+}
+.entrada-dinamica #volver-blog {
+  align-self: end;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+
 footer {
   background-color: #11283f;
   padding: 50px 0;

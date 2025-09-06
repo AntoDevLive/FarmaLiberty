@@ -110,3 +110,73 @@
         }
     }
 }
+
+
+.entrada-dinamica {
+    width: fit-content;
+    margin: auto;
+    padding-inline: 3rem;
+    padding-block: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    h1 {
+        font-size: 60px;
+        text-transform: capitalize;
+    }
+
+    .enlace-entrada-vacia {
+        font-size: 30px;
+        background-color: #ff5e58;
+        border: 2px solid #ff8c88;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 8px;
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            transition: .3s;
+        }
+
+        &:hover {
+            filter: brightness(1.3);
+        }
+
+        &:hover svg {
+            transform: translate(-5px);
+        }
+    }
+
+    img {
+        width: 900px;
+        border-radius: 8px;
+        box-shadow: -4px 4px 4px #a4d2ff, 4px 4px 4px #a4d2ff;
+    }
+
+    strong {
+        max-width: 900px;
+            text-wrap: pretty;
+            font-size: 30px;
+
+    }
+
+    p {
+        width: 80ch;
+            text-wrap: pretty;
+            font-size: 20px;
+            line-height: 30px;
+    }
+
+    #volver-blog {
+        align-self: end;
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+}
