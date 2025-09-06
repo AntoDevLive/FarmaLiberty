@@ -10,7 +10,7 @@
     <?php require '../templates/nav-panel.php' ?>
 
     <div class="panel-body">
-        <h2>Administracion de testimoniales</h2>
+        <h2>Administrar testimoniales</h2>
         <form id="form-filtro" action="testimoniales.php" method="get">
             <select name="filtro" id="select-testimoniales">
                 <?php if($filtro == 'pendiente'): ?>

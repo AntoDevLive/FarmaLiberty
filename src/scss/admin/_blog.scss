@@ -1,0 +1,39 @@
+@use '../utilities/variables' as v;
+
+table {
+    border-collapse: collapse;
+    border-radius: 4px;
+    background-color: v.$blanco;
+    overflow: hidden;
+}
+
+th {
+    font-size: 30px;
+    background-color: v.$color-principal;
+    color: #fff;
+}
+
+td {
+    font-size: 20px;
+    color: v.$color-principal;
+}
+
+th,td {
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.crear-post {
+    font-size: 23px;
+    padding: 8px 20px;
+    background-color: #ff6964;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 4px;
+
+    &:hover {
+        filter: brightness(1.3);
+    }
+}

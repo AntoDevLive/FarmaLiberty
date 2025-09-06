@@ -777,6 +777,43 @@ footer {
   background-color: #ffa29f;
 }
 
+table {
+  border-collapse: collapse;
+  border-radius: 4px;
+  background-color: #ebf2f9;
+  overflow: hidden;
+}
+
+th {
+  font-size: 30px;
+  background-color: #11283f;
+  color: #fff;
+}
+
+td {
+  font-size: 20px;
+  color: #11283f;
+}
+
+th, td {
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.crear-post {
+  font-size: 23px;
+  padding: 8px 20px;
+  background-color: #ff6964;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.crear-post:hover {
+  filter: brightness(1.3);
+}
+
 /* Utilities */
 *,
 *::before,
