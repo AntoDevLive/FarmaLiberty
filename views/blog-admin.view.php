@@ -1,5 +1,21 @@
 <?php require '../templates/header-panel.php' ?>
 
+<div class="modal-container invisible">
+    <div class="modal">
+        <form method="post" action="editar_post.php" enctype="multipart/form-data">
+            <input name="id" id="id" type="hidden">
+            <label for="titulo">Título</label>
+            <input name="titulo" id="titulo" type="text">
+            <label for="intro">Introducción</label>
+            <input name="intro" id="intro" type="text">
+            <label for="contenido">Contenido</label>
+            <textarea name="contenido" id="contenido"></textarea>
+            <label for="contenido">Imagen</label>
+            <input name="img" type="file">
+            <input type="submit" value="Editar">
+        </form>
+    </div>
+</div>
 
 <div class="panel">
     <?php require '../templates/nav-panel.php' ?>

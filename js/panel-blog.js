@@ -1,5 +1,11 @@
 const btnsEditar = document.querySelectorAll('.btn-secondary');
 const btnsEliminar = document.querySelectorAll('.btn-destructive');
+const modalContainer = document.querySelector('.modal-container');
+const modal = document.querySelector('.modal');
+const titulo = document.querySelector('#titulo');
+const intro = document.querySelector('#intro');
+const contenido = document.querySelector('#contenido');
+const inputID = document.querySelector('#id');
 
 
 btnsEditar.forEach(btn => {
@@ -19,8 +25,10 @@ btnsEditar.forEach(btn => {
                 })
                 .then(data => {
                     postData = JSON.parse(data);
-                    
-                    
+                    inputID.value = postData.id;
+                    titulo.value = postData.titulo;
+                    intro.value = postData.intro;
+                    contenido.value = postData.contenido;
                 })
                 .catch(error => {
                     console.log(error);
