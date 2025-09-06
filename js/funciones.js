@@ -235,7 +235,7 @@ function ocultarTestimonial(id) {
 }
 
 
-function toast(tipo, cuerpo) {
+export function toast(tipo, cuerpo) {
     const alertaPublicado = document.createElement('p');
 
     alertaPublicado.classList.add(tipo);
