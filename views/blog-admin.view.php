@@ -11,7 +11,7 @@
                 </svg>
             </div>
 
-            <h2>Editar post</h2>
+            <h2 id="titulo-form-blog"></h2>
 
             <input name="id" id="id" type="hidden">
             <div class="input-container-modal">
@@ -28,10 +28,10 @@
             </div>
             <div class="input-container-modal">
                 <label for="contenido">Imagen</label>
-                <input name="img" type="file">
+                <input name="img" type="file" accept="image/*">
             </div>
             <div class="input-container-modal">
-                <input type="submit" value="Editar">
+                <input id="submit-form-blog" type="submit">
             </div>
         </form>
     </div>
