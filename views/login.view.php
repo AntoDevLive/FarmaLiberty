@@ -1,12 +1,16 @@
 <?php require '../templates/header-panel.php' ?>
 
-<div class="panel">
-    <?php require '../templates/nav-panel.php' ?>
+<!-- From Uiverse.io by bociKond -->
+<form method="post" action="login.php" class="login">
+    <span class="input-span">
+        <label for="user" class="label">Usuario</label>
+        <input type="text" name="user" id="user" /></span>
+    <span class="input-span">
+        <label for="pass" class="label">Contraseña</label>
+        <input type="password" name="pass" id="pass" /></span>
+    <input class="submit" type="submit" value="Iniciar Sesión" />
+</form>
 
-    <div class="panel-body">
-        <h2>Bienvenido/a <span></span></h2>
-    </div>
-</div>
 
 </body>
 

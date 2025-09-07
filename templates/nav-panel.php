@@ -5,6 +5,6 @@
                 <li><a class="menu__link" href="blog-admin.php">Blog</a></li>
             </ul>
             <ul>
-                <li><a class="menu__link" href="">Cerrar Sesión</a></li>
+                <li><a class="menu__link" href="../admin//cerrar_sesion.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
