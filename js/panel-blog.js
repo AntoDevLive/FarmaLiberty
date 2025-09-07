@@ -1,3 +1,5 @@
+import { toast } from "./funciones.js";
+
 const btnsEditar = document.querySelectorAll('.btn-secondary');
 const btnsEliminar = document.querySelectorAll('.btn-destructive');
 const btnCerrar = document.querySelector('.btn-cerrar');
@@ -10,7 +12,6 @@ const inputID = document.querySelector('#id');
 const body = document.querySelector('body');
 const formBlog = document.querySelector('#form-blog');
 const crearBtn = document.querySelector('.crear-post');
-
 
 btnsEditar.forEach(btn => {
     btn.addEventListener('click', e => {
@@ -68,22 +69,65 @@ btnsEditar.forEach(btn => {
 
 btnsEliminar.forEach(btn => {
     btn.addEventListener('click', e => {
-        const id = e.currentTarget.getAttribute('data-id');
 
-        fetch(`eliminar_post.php?id=${id}`, {
-            method: 'GET'
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('No se pudo eliminar el testimonial');
-                }
-                return response.text();
-            })
-            
-        window.location.reload();
+        e.stopPropagation();
+
+        const id = e.currentTarget.getAttribute('data-id');
+        const alerta = crearAlerta(id);
+
+        body.classList.add('bloquear-body');
+
+        body.addEventListener('click', () => {
+            alerta.remove();
+            body.classList.remove('bloquear-body');
+        });
     })
 })
 
+function crearAlerta(id) {
+    const alertaContainer = document.createElement('div');
+    const alerta = document.createElement('div');
+    const alertaTexto = document.createElement('div');
+    const p = document.createElement('p');
+    const botones = document.createElement('div');
+    const btnConfirmar = document.createElement('button');
+    const btnCancelar = document.createElement('button');
+
+    p.innerHTML = `¿Estás seguro de que deseas eliminar este post? <br><b>Este cambio no se podrá revertir</b>`;
+    p.style.textAlign = 'center';
+
+    btnConfirmar.textContent = 'Confirmar';
+    btnCancelar.textContent = 'Cancelar';
+
+    alertaContainer.classList.add('modal-container');
+    alerta.classList.add('modal');
+    alertaTexto.classList.add('advertencia-testimonial');
+    botones.classList.add('botones');
+
+    alertaTexto.appendChild(p);
+    botones.append(btnConfirmar, btnCancelar);
+    alertaTexto.appendChild(botones);
+    alerta.appendChild(alertaTexto);
+    alertaContainer.appendChild(alerta);
+    body.appendChild(alertaContainer);
+
+    alertaTexto.addEventListener('click', e => {
+        e.stopPropagation();
+    })
+
+    btnCancelar.onclick =  () => {
+        alertaContainer.remove();
+        body.classList.remove('bloquear-body');
+    } 
+
+    btnConfirmar.onclick = () => {
+        alertaContainer.remove();
+        body.classList.remove('bloquear-body');
+        fetchEliminarPost(id);
+    } 
+
+    return alertaContainer;
+}
 
 
 crearBtn.addEventListener('click', e => {
@@ -111,3 +155,27 @@ crearBtn.addEventListener('click', e => {
         body.classList.remove('bloquear-body');
     });
 })
+
+
+function fetchEliminarPost(id) {
+    fetch(`eliminar_post.php?id=${id}`, {
+        method: 'GET'
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo eliminar el testimonial');
+            }
+            return response.text();
+        })
+        .then(data => {
+              toast('toast-exito', data);  
+        })
+        .catch(error => {
+            toast('toast-error', error.message)
+        })
+
+        setTimeout(() => {
+          window.location.reload();  
+        }, 1000);
+        
+}

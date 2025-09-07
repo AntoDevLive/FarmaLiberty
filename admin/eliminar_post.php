@@ -2,17 +2,20 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-
     $id = $_GET['id'];
 
-    $conexion = conexionDB('localhost', 'root', '');
+    try {
+        $conexion = conexionDB('localhost', 'root', '');
 
-    $statement = $conexion->prepare('DELETE FROM blog WHERE id = :id');
+        $statement = $conexion->prepare('DELETE FROM blog WHERE id = :id');
 
+        $statement->execute([
+            ':id' => $id
+        ]);
 
-    $statement->execute([
-        ':id' => $id
-    ]);
-
-    header('Location: blog-admin.php');
+        echo 'Post eliminado';
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        exit;
+    }
 }

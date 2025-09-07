@@ -46,6 +46,8 @@
             <button class="crear-post">Nuevo post</button>
         </div>
 
+    <?php if($entradas): ?>
+
         <table>
             <thead>
                 <th>ID</th>
@@ -83,6 +85,10 @@
                 </tr>
             <?php endforeach; ?>
         </table>
+
+        <?php else: ?>
+            <h2 class="vacio">No hay posts en el Blog</h2>
+        <?php endif; ?>
 
         <section id="pagincacion-blog-admin" class="paginacion">
             <?php if ($pagina == 1): ?>

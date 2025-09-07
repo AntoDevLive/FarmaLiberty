@@ -15,8 +15,10 @@ include 'templates/header.php';  ?>
     </form>
 
     <?php
-    if (!$entradas) {
+    if ($busqueda && !$entradas) {
         echo "<h2 class='vacio'>No hay resultados de la búsqueda: $busqueda</h2>";
+    } else if(!$entradas) {
+        echo "<h2 class='vacio'>Aún no hay posts en el Blog</h2>";
     }
     ?>
 
