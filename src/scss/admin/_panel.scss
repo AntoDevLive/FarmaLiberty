@@ -59,6 +59,10 @@
         h2 {
             font-size: 40px;
             color: v.$color-principal;
+
+            span {
+                text-transform: capitalize !important;
+            }
         }
     }
 }

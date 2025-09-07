@@ -643,6 +643,9 @@ footer {
   font-size: 40px;
   color: #11283f;
 }
+.panel .panel-body h2 span {
+  text-transform: capitalize !important;
+}
 
 .titulo-panel {
   display: flex;
