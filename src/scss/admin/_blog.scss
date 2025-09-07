@@ -38,13 +38,14 @@ td {
     cursor: pointer;
     transition: .3s;
     border-radius: 4px;
+        
 
     &:hover {
         filter: brightness(1.3);
     }
 }
 
-.botones {
+.botones-blog-admin {
     display: flex;
     justify-content: center;
     align-items: center;

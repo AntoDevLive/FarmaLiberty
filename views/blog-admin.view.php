@@ -2,17 +2,37 @@
 
 <div class="modal-container invisible">
     <div class="modal">
-        <form method="post" action="editar_post.php" enctype="multipart/form-data">
+        <form id="form-blog" method="post" enctype="multipart/form-data">
+            <div class="btn-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                </svg>
+            </div>
+
+            <h2>Editar post</h2>
+
             <input name="id" id="id" type="hidden">
-            <label for="titulo">Título</label>
-            <input name="titulo" id="titulo" type="text">
-            <label for="intro">Introducción</label>
-            <input name="intro" id="intro" type="text">
-            <label for="contenido">Contenido</label>
-            <textarea name="contenido" id="contenido"></textarea>
-            <label for="contenido">Imagen</label>
-            <input name="img" type="file">
-            <input type="submit" value="Editar">
+            <div class="input-container-modal">
+                <label for="titulo">Título</label>
+                <input name="titulo" id="titulo" type="text">
+            </div>
+            <div class="input-container-modal">
+                <label for="intro">Introducción</label>
+                <input name="intro" id="intro" type="text">
+            </div>
+            <div class="input-container-modal">
+                <label for="contenido">Contenido</label>
+                <textarea name="contenido" id="contenido"></textarea>
+            </div>
+            <div class="input-container-modal">
+                <label for="contenido">Imagen</label>
+                <input name="img" type="file">
+            </div>
+            <div class="input-container-modal">
+                <input type="submit" value="Editar">
+            </div>
         </form>
     </div>
 </div>
@@ -40,7 +60,7 @@
                     <td><img src="<?php echo $entrada['img'] ?>" alt=""></td>
                     <td><?php echo $entrada['titulo'] ?></td>
                     <td class="td-acciones">
-                        <div class="botones">
+                        <div class="botones-blog-admin">
                             <button data-id="<?php echo $entrada['id']; ?>" aria-label="Editar post" title="Editar post" class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-edit">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
